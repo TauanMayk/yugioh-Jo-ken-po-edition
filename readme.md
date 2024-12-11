@@ -8,5 +8,5 @@ conceitos abordados:
 - Funções limpas
 - Organização de código
 
-- Preview:
+<h2>Preview:</h2>
 ![Screenshot_69](https://github.com/user-attachments/assets/010148b0-318a-4c3a-a1a0-4b4ba6d7b672)
