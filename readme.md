@@ -9,4 +9,5 @@ conceitos abordados:
 - Organização de código
 
 <h2>Preview:</h2>
-![Screenshot_69](https://github.com/user-attachments/assets/010148b0-318a-4c3a-a1a0-4b4ba6d7b672)
+
+![Screenshot_69](https://github.com/user-attachments/assets/b227a98d-50d7-4354-879f-b7b95490318f)
