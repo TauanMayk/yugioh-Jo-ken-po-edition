@@ -51,6 +51,22 @@ button, a, img:hover, button:hover, a:hover{
   justify-content: space-around;
 }
 
+.imagem-card{
+  background: url('../assets/icons/card-front.png');
+  background-size: contain;
+  width: 250px;
+  height: 350px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.menu_avatar img{
+    width: 203px;
+    height: 235px;
+}
+
 .container__right {
   width: 65%;
 }
@@ -127,8 +143,8 @@ button, a, img:hover, button:hover, a:hover{
 }
 
 .card-infield {
-  height: 12rem;
-  width: 8rem;
+  height: 13rem;
+  width: 11rem;
   border: 1px solid #fff;
   border-radius: 8px;
 }

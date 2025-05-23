@@ -35,24 +35,104 @@ const cardData = [
     name: "Blue Eyes White Dragon",
     type: "Paper",
     img: `${pathImages}dragon.png`,
-    WinOf: [1],
-    LoseOf: [2],
+    WinOf: [1, 3, 4, 5, 7, 8, 10, 12],
+    LoseOf: [2, 6, 9, 11],
   },
   {
     id: 1,
     name: "Dark Magician",
     type: "Rock",
     img: `${pathImages}magician.png`,
-    WinOf: [2],
-    LoseOf: [0],
+    WinOf: [3, 7, 8, 10, 12],
+    LoseOf: [0, 4, 5, 6, 9, 11],
   },
   {
     id: 2,
     name: "Exodia",
-    type: "Scissors",
+    type: "Special",
     img: `${pathImages}exodia.png`,
-    WinOf: [0],
-    LoseOf: [1],
+    WinOf: [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    LoseOf: [],
+  },
+  {
+    id: 3,
+    name: "Old Dragon",
+    type: "Dragon",
+    img: `${pathImages}olddragon.png`,
+    WinOf: [7, 8, 10, 12],
+    LoseOf: [1, 2, 3, 4, 5, 6, 9, 11],
+  },
+  {
+    id: 4,
+    name: "Red-Eyes Black Dragon",
+    type: "Scissors",
+    img: `${pathImages}RedDragon.png`,
+    WinOf: [3, 7, 8, 10, 12],
+    LoseOf: [0, 1, 2, 4, 5, 6, 9, 11],
+  },
+  {
+    id: 5,
+    name: "Dark Magician Girl",
+    type: "Paper",
+    img: `${pathImages}magiciangirl.png`,
+    WinOf: [3, 7, 8, 10, 12],
+    LoseOf: [0, 1, 2, 4, 5, 6, 9, 11],
+  },
+  {
+    id: 6,
+    name: "Kuriboh",
+    type: "Special",
+    img: `${pathImages}kuriboh.png`,
+    WinOf: [],
+    LoseOf: [0, 1, 3, 4, 5, 7, 8, 10, 11, 12, 2, 9],
+  },
+  {
+    id: 7,
+    name: "Celta-Guardian",
+    type: "Scissors",
+    img: `${pathImages}celta-warrior.png`,
+    WinOf: [8, 12],
+    LoseOf: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11],
+  },
+  {
+    id: 8,
+    name: "Magician Time",
+    type: "Special",
+    img: `${pathImages}magicianTime.png`,
+    WinOf: [],
+    LoseOf: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12],
+  },
+  {
+    id: 9,
+    name: "Millenium Eye",
+    type: "Special",
+    img: `${pathImages}milleniumEye.png`,
+    WinOf: [0, 1, 3, 4, 5, 6, 7, 8, 10, 11, 12],
+    LoseOf: [2],
+  },
+  {
+    id: 10,
+    name: "Dark-Fairy",
+    type: "Scissors",
+    img: `${pathImages}fairy.png`,
+    WinOf: [7, 8, 12],
+    LoseOf: [0, 1, 2, 3, 4, 5, 6, 9, 10, 11],
+  },
+  {
+    id: 11,
+    name: "Ultimate White Dragon",
+    type: "Rock",
+    img: `${pathImages}dragonThreeEyes.png`,
+    WinOf: [0, 1, 3, 4, 5, 7, 8, 10, 12],
+    LoseOf: [2, 6, 9],
+  },
+  {
+    id: 12,
+    name: "Baby Dragon",
+    type: "Paper",
+    img: `${pathImages}dragonBaby.png`,
+    WinOf: [8],
+    LoseOf: [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11],
   },
 ];
 
@@ -82,7 +162,6 @@ async function createCardImage(idCard, fieldSide) {
 }
 
 async function setCardsField(cardId) {
-
   await showHiddenCardFieldsImages(true);
 
   await removeAllCardsImages();
@@ -100,7 +179,7 @@ async function setCardsField(cardId) {
 }
 
 async function drawCardsInField(cardId, computerCardId) {
-    state.fieldsCards.player.src = cardData[cardId].img;
+  state.fieldsCards.player.src = cardData[cardId].img;
   state.fieldsCards.computer.src = cardData[computerCardId].img;
 }
 
